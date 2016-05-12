@@ -37,9 +37,9 @@
 							echo "<td>".$row->fecha_inicial."</td>";
 							echo "<td>".$row->fecha_final."</td>";
 							echo "<td>".$row->horas_servicio."</td>";
-							echo "<td>".$row->nombre."</td>";
+							echo "<td>".$row->idDependencia."</td>";
 
-							echo "<td><a href='".base_url()."profesorControlador/detallesConvenio/".$row->idConvenio."'><i class='icon-info-sign icon-2x'></i></a>";
+							echo "<td><a href='".base_url()."profesorControlador'><i class='icon-info-sign icon-2x'></i></a>";
 							echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 							echo "<a href='".base_url()."profesorControlador/eliminarConvenio/".$row->idConvenio."'><i class='icon-remove icon-2x' style='color:red'></i></a></td>";
 

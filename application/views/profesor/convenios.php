@@ -31,14 +31,13 @@
   <tbody>
 		<?php
 					if ($filas != FALSE){
-            foreach ($filas->result() as $row) {
+						foreach ($filas->result() as $row) {
 						echo "<tr>";
 							echo "<td>".$row->matricula."</td>";
 							echo "<td>".$row->fecha_inicial."</td>";
 							echo "<td>".$row->fecha_final."</td>";
 							echo "<td>".$row->horas_servicio."</td>";
-
-							echo "<td>".$row->nombre."</td>";
+							echo "<td>".$row->idDependencia."</td>";
 
 							echo "<td><a href='".base_url()."profesorControlador/detallesConvenio/".$row->idConvenio."'><i class='icon-info-sign icon-2x'></i></a>";
 							echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";

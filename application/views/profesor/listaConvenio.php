@@ -14,7 +14,7 @@
   <dt>Matricula</dt>
   <dd style="border-bottom: 1px solid ">- <?=$matricula?></dd>
   <dt>Dependencia</dt>
-  <dd style="border-bottom: 1px solid ">- <?=$nombre?></dd>
+  <dd style="border-bottom: 1px solid ">- <?=$idDependencia?></dd>
 </dl>
 </fieldset>
 </div>
@@ -30,3 +30,5 @@
 </div>
 <br>
 </div>
+
+

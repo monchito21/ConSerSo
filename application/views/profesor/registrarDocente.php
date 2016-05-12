@@ -30,7 +30,7 @@
     </div>
     <div class="row">
       <div class="one third padded">
-        <label for="usuario">Matrícula </label>
+        <label for="usuario">Usuario (NickName)</label>
         <input id="usuario" name="usuario" type="text" placeholder="Nuevo Usuario" required>
       </div>
       <div class="one third padded">

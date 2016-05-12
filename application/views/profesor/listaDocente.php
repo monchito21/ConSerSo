@@ -11,7 +11,7 @@
   <dd style="border-bottom: 1px solid ">- <?=$cargo?></dd>
   <dt>Correo Electronico</dt>
   <dd style="border-bottom: 1px solid ">- <?=$eMail?></dd>
-  <dt>Matricula</dt>
+  <dt>Usuario</dt>
   <dd style="border-bottom: 1px solid ">- <?=$usuario?></dd>
   <dt>Contraseña</dt>
   <dd style="border-bottom: 1px solid ">- <?=$contrasenha?></dd>
@@ -30,3 +30,5 @@
 </div>
 <br>
 </div>
+
+

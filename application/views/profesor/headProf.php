@@ -60,7 +60,7 @@ body {background-color:lightblue;}
     </li>
   </ul>
 </li>
-    <li><a href="<?=base_url()?>profesorControlador/avance"><i class=" icon-file-alt"></i> Avances del alumno</a></li>
+    <li><a href="<?=base_url()?>profesorControlador/buscaDocumentos"><i class=" icon-file-alt"></i> Avances del alumno</a></li>
 
   </ul>
 </nav>

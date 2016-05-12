@@ -40,11 +40,7 @@ class ProfesorControlador extends CI_Controller {
 			'filas' => $this->modeloServicio->obtenerAlumnos(FALSE)
 			);
 
-			if($this->session->userdata('cargo') == 'administrador'){
-			$this->load->view('administrador/headAdmin');
-		}else{
-			$this->load->view('profesor/headProf');
-		}
+		$this->load->view('profesor/headProf');
 		$this->load->view('profesor/alumnosProf',$data);
 		$this->load->view('foot');
 	}
@@ -54,21 +50,13 @@ public function nuevoAlumno(){
 			'filas' => $this->modeloServicio->obtenerDocentes(FALSE)
 			);
 
-			if($this->session->userdata('cargo') == 'administrador'){
-			$this->load->view('administrador/headAdmin');
-		}else{
-			$this->load->view('profesor/headProf');
-		}
+		$this->load->view('profesor/headProf');
 		$this->load->view('profesor/registroAlumno',$data);
 		$this->load->view('foot');
 	}
 
 	public function modificarAlumno(){
-		if($this->session->userdata('cargo') == 'administrador'){
-		$this->load->view('administrador/headAdmin');
-	}else{
 		$this->load->view('profesor/headProf');
-	}
 		$this->load->view('profesor/editarAlumno');
 		$this->load->view('foot');
 	}
@@ -79,21 +67,13 @@ public function nuevoAlumno(){
 			'filas' => $this->modeloServicio->obtenerDocentes(FALSE)
 			);
 
-			if($this->session->userdata('cargo') == 'administrador'){
-			$this->load->view('administrador/headAdmin');
-		}else{
-			$this->load->view('profesor/headProf');
-		}
+		$this->load->view('profesor/headProf');
 		$this->load->view('profesor/docentes',$data);
 		$this->load->view('foot');
 	}
 
 	public function nuevoDocente(){
-		if($this->session->userdata('cargo') == 'administrador'){
-		$this->load->view('administrador/headAdmin');
-	}else{
-		$this->load->view('profesor/headProf');
-	}
+	$this->load->view('profesor/headProf');
 	$this->load->view('profesor/registrarDocente');
 	$this->load->view('foot');
 }
@@ -104,21 +84,13 @@ public function nuevoAlumno(){
 			'filas' => $this->modeloServicio->obtenerDependencias(FALSE)
 			);
 
-			if($this->session->userdata('cargo') == 'administrador'){
-			$this->load->view('administrador/headAdmin');
-		}else{
-			$this->load->view('profesor/headProf');
-		}
+		$this->load->view('profesor/headProf');
 		$this->load->view('profesor/dependencias',$data);
 		$this->load->view('foot');
 	}
 
 	public function nuevaDependencia(){
-		if($this->session->userdata('cargo') == 'administrador'){
-		$this->load->view('administrador/headAdmin');
-	}else{
-		$this->load->view('profesor/headProf');
-	}
+	$this->load->view('profesor/headProf');
 	$this->load->view('profesor/registrarDependencia');
 	$this->load->view('foot');
 }
@@ -126,15 +98,10 @@ public function nuevoAlumno(){
 	public function verConvenio(){
 
 		$data = array(
-			'filas' => $this->modeloServicio->obtenerConveniosID(FALSE)
+			'filas' => $this->modeloServicio->obtenerConvenios(FALSE)
 			);
 
-
-			if($this->session->userdata('cargo') == 'administrador'){
-			$this->load->view('administrador/headAdmin');
-		}else{
-			$this->load->view('profesor/headProf');
-		}
+		$this->load->view('profesor/headProf');
 		$this->load->view('profesor/convenios',$data);
 		$this->load->view('foot');
 	}
@@ -146,11 +113,7 @@ public function nuevoAlumno(){
 		'filas1' => $this->modeloServicio->obtenerDependencias(FALSE)
 		);
 
-		if($this->session->userdata('cargo') == 'administrador'){
-		$this->load->view('administrador/headAdmin');
-	}else{
-		$this->load->view('profesor/headProf');
-	}
+	$this->load->view('profesor/headProf');
 	$this->load->view('profesor/registrarConvenio',$data);
 	$this->load->view('foot');
 	}
@@ -161,21 +124,13 @@ public function nuevoAlumno(){
 			'filas' => $this->modeloServicio->obtenerReportes(FALSE)
 			);
 
-			if($this->session->userdata('cargo') == 'administrador'){
-			$this->load->view('administrador/headAdmin');
-		}else{
-			$this->load->view('profesor/headProf');
-		}
+		$this->load->view('profesor/headProf');
 		$this->load->view('profesor/reporte',$data);
 		$this->load->view('foot');
 	}
 
 	public function modificarReporte(){
-		if($this->session->userdata('cargo') == 'administrador'){
-		$this->load->view('administrador/headAdmin');
-	}else{
 		$this->load->view('profesor/headProf');
-	}
 		$this->load->view('profesor/editarReporte');
 		$this->load->view('foot');
 	}
@@ -185,11 +140,7 @@ public function nuevoAlumno(){
 			'filas' => $this->modeloServicio->obtenerAlumnos(FALSE)
 			);
 
-			if($this->session->userdata('cargo') == 'administrador'){
-			$this->load->view('administrador/headAdmin');
-		}else{
-			$this->load->view('profesor/headProf');
-		}
+		$this->load->view('profesor/headProf');
 		$this->load->view('profesor/registraReporte',$data);
 		$this->load->view('foot');
 	}
@@ -200,11 +151,7 @@ public function nuevoAlumno(){
 			'filas' => $this->modeloServicio->obtenerCartaAceptacion(FALSE)
 			);
 
-			if($this->session->userdata('cargo') == 'administrador'){
-			$this->load->view('administrador/headAdmin');
-		}else{
-			$this->load->view('profesor/headProf');
-		}
+		$this->load->view('profesor/headProf');
 		$this->load->view('profesor/cartaAceptacion',$data);
 		$this->load->view('foot');
 	}
@@ -215,11 +162,7 @@ public function nuevoAlumno(){
 		'filas' => $this->modeloServicio->obtenerAlumnos(FALSE)
 		);
 
-		if($this->session->userdata('cargo') == 'administrador'){
-		$this->load->view('administrador/headAdmin');
-	}else{
-		$this->load->view('profesor/headProf');
-	}
+	$this->load->view('profesor/headProf');
 	$this->load->view('profesor/registraCartaAceptacion',$data);
 	$this->load->view('foot');
 }
@@ -230,11 +173,7 @@ public function nuevoAlumno(){
 			'filas' => $this->modeloServicio->obtenerCartaLiberacion(FALSE)
 			);
 
-			if($this->session->userdata('cargo') == 'administrador'){
-			$this->load->view('administrador/headAdmin');
-		}else{
-			$this->load->view('profesor/headProf');
-		}
+		$this->load->view('profesor/headProf');
 		$this->load->view('profesor/cartaLiberacion',$data);
 		$this->load->view('foot');
 	}
@@ -245,11 +184,7 @@ public function nuevoAlumno(){
 		'filas' => $this->modeloServicio->obtenerAlumnos(FALSE)
 		);
 
-		if($this->session->userdata('cargo') == 'administrador'){
-		$this->load->view('administrador/headAdmin');
-	}else{
-		$this->load->view('profesor/headProf');
-	}
+	$this->load->view('profesor/headProf');
 	$this->load->view('profesor/registraCartaLiberacion',$data);
 	$this->load->view('foot');
 	}
@@ -261,12 +196,7 @@ public function nuevoAlumno(){
 			'filas' => $this->modeloServicio->obtenerPlan(FALSE)
 			);
 
-
-				if($this->session->userdata('cargo') == 'administrador'){
-				$this->load->view('administrador/headAdmin');
-			}else{
-				$this->load->view('profesor/headProf');
-			}
+		$this->load->view('profesor/headProf');
 		$this->load->view('profesor/planActividades',$data);
 		$this->load->view('foot');
 	}
@@ -278,12 +208,7 @@ public function nuevoAlumno(){
 		'filas1' => $this->modeloServicio->obtenerDependencias(FALSE)
 		);
 
-
-			if($this->session->userdata('cargo') == 'administrador'){
-			$this->load->view('administrador/headAdmin');
-		}else{
-			$this->load->view('profesor/headProf');
-		}
+	$this->load->view('profesor/headProf');
 	$this->load->view('profesor/registraPlanActividades',$data);
 	$this->load->view('foot');
 	}
@@ -610,8 +535,7 @@ public function buscaReporte(){
 	$query=$this->input->get('query',TRUE);
 
 	if($query){
-		//metodo para obtener los datos del convenio de un solo alumno
-		$result = $this->modeloServicio->obtenerConveniosID(trim($query));
+		$result = $this->modeloServicio->seekConvenio(trim($query));
 		if ($result != FALSE){
 			$data = array('result' => $result);
 		}else{
@@ -1065,7 +989,7 @@ function actualizaPlan(){
 	public  function detallesConvenio(){
 		$query=$this->input->get('query',TRUE);
 		$idDocente = $this->uri->segment(3);
-		$result = $this->modeloServicio->obtenerConveniosIDD($idDocente);
+		$result = $this->modeloServicio->traerConvenio($idDocente);
 
 		if ($result != FALSE){
 			foreach ($result->result() as $row) {
@@ -1075,7 +999,7 @@ function actualizaPlan(){
 				$horas_servicio=$row->horas_servicio;
 				$matricula=$row->matricula;
 				$idDependencia=$row->idDependencia;
-				$nombre=$row->nombre;
+
 			}
 			$data= array(
 				'idConvenio' => $idConvenio,
@@ -1084,20 +1008,14 @@ function actualizaPlan(){
 				'horas_servicio' => $horas_servicio,
 				'matricula' => $matricula,
 				'idDependencia' => $idDependencia,
-				'nombre'=> $nombre,
-				'filas1' => $this->modeloServicio->obtenerDependencias($matricula),
-				'filas' => $this->modeloServicio->obtenerAlumnos($matricula)
+				'filas1' => $this->modeloServicio->obtenerDependencias(FALSE),
+				'filas' => $this->modeloServicio->obtenerAlumnos(FALSE)
 				);
 		}else{
 			$data = '';
 			return FALSE;
 		}
-
-			if($this->session->userdata('cargo') == 'administrador'){
-			$this->load->view('administrador/headAdmin');
-		}else{
-			$this->load->view('profesor/headProf');
-		}
+$this->load->view('profesor/headProf');
 	if ($query == "Actualizar Valores"){
 		$this->load->view('profesor/editarConvenio', $data);
 	}else{
@@ -1121,33 +1039,36 @@ function actualizaConvenio(){
 		redirect('profesorControlador/verConvenio');
 	}
 
-public function avance(){
-		$query=$this->input->get('query',TRUE);
-
-		if($query){
-			$result = $this->modeloServicio->consultaAlumno($query);
-
-
-		//$info = get_dir_file_info($this->folder.'/'.$result.'/', TRUE);
-
-		//if($info){
-
-foreach ($result as $key) {
-	$data = $key->matricula;
-}
-
-				//$data = array('result' => $result
-					//'info'=>$info
-				//	);
-
-        //}else{
-			//$data = array('result'=>'');
-        //}
+public function buscaDocumentos(){
 
         $this->load->view('profesor/headProf');
-		$this->load->view('profesor/avancesAlumno',$data);
+		$this->load->view('profesor/buscaDocAlumno');
 		$this->load->view('foot');
-	}
+	
 }
+
+public function pdfsAlumno(){
+
+$query=$this->input->get('query',TRUE);
+
+	$result = $this->modeloServicio->datosAlumno(trim($query));
+	$cosa=   $result->row_array();
+	$mat=$cosa['matricula'];
+	
+
+	$info = get_dir_file_info($this->folder.'/'.$mat.'/', TRUE);
+   
+		if($info){
+				$data['info']=$info;
+				$data['mat']=$mat;
+        }else{
+            $data['info']=NULL;
+        }
+
+       	$this->load->view('profesor/headProf');
+		$this->load->view('profesor/docsAlumno',$data);
+		$this->load->view('foot');
+}
+
 
 }

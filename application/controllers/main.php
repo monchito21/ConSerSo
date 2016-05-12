@@ -29,7 +29,10 @@ public function inicio()
 	}
 
 public function login(){
-		  //$this->session->sess_destroy();
+		//if($this->session->userdata('cuentaactiva') == TRUE )
+		//{
+		//	$this->cerrarSesion();
+		//}else{//$this->session->sess_destroy();
 			// obtenemos datos del formulario
 			$datoslogin = array(
 				'usuario'=>$this->input->post('usuario',TRUE),
@@ -52,7 +55,8 @@ public function login(){
 		//de otra forma redireciona al inicio del alumno
 			}else{
 			redirect('main/inicio');
-		}
+		
+	}
 	}
 	public function cerrarSesion(){
 
@@ -94,8 +98,8 @@ public function login(){
 				'matricula' => $this->input->post('matricula',TRUE)
 				);
 			$this->modeloServicio->saveCartaAceptacion($data);
-			redirect('pdfs/generarCartaAceptacion');
 
+			redirect('pdfs/generarCartaAceptacion');
 		}
 		public function eliminarCartaAceptacion(){
 			if($this->session->userdata('cuentaactiva') != TRUE )
